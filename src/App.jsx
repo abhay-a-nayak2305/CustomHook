@@ -40,7 +40,6 @@ function App() {
                             src={imageUrl}
                             alt={`${product.title} image ${index + 1}`}
                             className="w-full h-full object-cover transition-transform"
-                            loading="lazy"
                           />
                         ) : (
                           <div className="w-full h-full flex items-center justify-center text-xs text-gray-500 bg-gray-100">
