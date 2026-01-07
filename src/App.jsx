@@ -30,8 +30,8 @@ function App() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {data.map(product => (
               <div key={product.id} className="bg-white p-6 rounded-lg shadow-md">
-                <div className="grid grid-cols-3 gap-2 mb-4">
-                  {[...Array(3)].map((_, index) => {
+                <div className="grid gap-2 mb-4">
+                  {[...Array(1)].map((_, index) => {
                     const imageUrl = product.images?.[index];
                     return (
                       <div key={index} className="h-24 rounded-md overflow-hidden bg-gray-200">
@@ -40,7 +40,6 @@ function App() {
                             src={imageUrl}
                             alt={`${product.title} image ${index + 1}`}
                             className="w-full h-full object-cover transition-transform"
-                            loading="lazy"
                           />
                         ) : (
                           <div className="w-full h-full flex items-center justify-center text-xs text-gray-500 bg-gray-100">
