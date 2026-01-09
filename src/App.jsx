@@ -29,9 +29,35 @@ function App() {
         )}
 
         {!loading && !error && data && (
+<<<<<<< HEAD
           <section className="text-gray-600 body-font">
             <div className="flex flex-wrap -m-4 border">
                 {data.map((product) => (
+=======
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            {data.map(product => (
+              <div key={product.id} className="bg-white p-6 rounded-lg shadow-md">
+                <div className="grid gap-2 mb-4">
+                  {[...Array(1)].map((_, index) => {
+                    const imageUrl = product.images?.[index];
+                    return (
+                      <div key={index} className="h-24 rounded-md overflow-hidden bg-gray-200">
+                        {imageUrl ? (
+                          <img 
+                            src={imageUrl}
+                            alt={`${product.title} image ${index + 1}`}
+                            className="w-full h-full object-cover transition-transform"
+                          />
+                        ) : (
+                          <div className="w-full h-full flex items-center justify-center text-xs text-gray-500 bg-gray-100">
+                            No Image
+                          </div>
+                        )}
+                      </div>
+                    );
+                  })}
+                </div>
+>>>>>>> 833b7b96e8dad587853211a9c6d6f873e0a5d9b0
 
                   <div key={product.id} className="lg:w-1/4 md:w-1/2 p-4 w-full border rounded-2xl">
 
