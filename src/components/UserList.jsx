@@ -1,5 +1,5 @@
 import React from 'react';
-import { useFetch } from './hooks/useFetch';
+import { useFetch } from './hooks/useFetch.js';
 import './UserList.css';
 
 const URL = 'https://jsonplaceholder.typicode.com/users';
